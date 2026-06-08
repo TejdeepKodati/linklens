@@ -165,6 +165,30 @@
       border-radius: 50%; animation: spin .6s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+    .made-by {
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.7;
+  z-index: 500;
+  user-select: none;
+}
+
+.made-by a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.made-by:hover {
+  opacity: 1;
+}
+
+.made-by a:hover {
+  color: var(--accent);
+}
   </style>
 </head>
 <body>
@@ -251,7 +275,12 @@
 
 <!-- TOAST -->
 <div id="toast"></div>
-
+<div class="made-by">
+  Made by
+  <a href="https://github.com/TejdeepKodati" target="_blank">
+    Tejdeep
+  </a>
+</div>
 <script>
 // ── State ──────────────────────────────────────────────────
 const API = '';  // Same origin
